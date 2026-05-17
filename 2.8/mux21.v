@@ -4,5 +4,5 @@ module mux21 (
     input wire sel,
     output wire [7:0] out
 );
-    assign out = sel ? data1 : data0;
+  assign out = sel ? data1 : data0;
 endmodule

@@ -1,7 +1,7 @@
 module choose (
-  input [3:0] in,
-  output reg [3:0] out0,
-  output reg [3:0] out1
+    input [3:0] in,
+    output reg [3:0] out0,
+    output reg [3:0] out1
 );
 
   always @(*) begin
@@ -9,4 +9,4 @@ module choose (
     out1 = {in[0], in[1], in[2], in[3]};
   end
 
-endmodule //choose
+endmodule  //choose
