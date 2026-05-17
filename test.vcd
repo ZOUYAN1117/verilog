@@ -1,0 +1,25 @@
+$date
+	Wed May 06 10:52:07 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module hello $end
+$var reg 8 ! count [7:0] $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 !
+$end
+#10
+b10101010 !
+#20
+b11111111 !
+#30
