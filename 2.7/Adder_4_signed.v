@@ -6,7 +6,7 @@ module add (
 );
   localparam EXT_NUM = 4;
   reg [EXT_NUM:0] ext_a, ext_b, ext_sum;
-  always @(a or b) begin
+  always @(*) begin
     ext_a = {a[3], a};
     ext_b = {b[3], b};
     ext_sum = ext_a + ext_b;

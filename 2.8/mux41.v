@@ -1,3 +1,12 @@
+module mux21 (
+    input  wire data0,
+    input  wire data1,
+    input  wire sel,
+    output wire out
+);
+  assign out = sel ? data1 : data0;
+endmodule
+
 module mux41 (
     input  a,
     input  b,
