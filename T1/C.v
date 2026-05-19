@@ -11,24 +11,13 @@ module alu #(
     out   = 0;
     carry = 0;
     case (op)
-      3'b000: begin
-        out = in1 + in2;
-        if (out < in1 | out < in2) carry = 1;
-        else carry = 0;
-      end
-      3'b001: begin
-        out = in1 - in2;
-        if (in1 < in2) carry = 1;
-        else carry = 0;
-      end
+      3'b000:  {carry, out} = in1 + in2;
+      3'b001:  {carry, out} = in1 - in2;
       3'b010:  out = in1 & in2;
       3'b011:  out = in1 | in2;
       3'b100:  out = in1 ^ in2;
-      3'b101: begin
-        if (in1 == in2) carry = 1;
-        else carry = 0;
-      end
-      default: carry = 0;
+      3'b101:  carry = (in1 == in2);
+      default: ;
     endcase
   end
 endmodule
